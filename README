@@ -1,0 +1,2 @@
+node ace configure @adonisjs/lucid
+npm i @types/luxon
