@@ -1,2 +1,5 @@
-node ace configure @adonisjs/lucid
-npm i @types/luxon
+docker compose up
+
+if doesn't work try first:
+
+npm install
