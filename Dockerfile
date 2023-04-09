@@ -27,4 +27,5 @@ RUN npm i @adonisjs/lucid@latest
 RUN node ace configure @adonisjs/lucid
 RUN npm i @types/luxon
 RUN npm i adonis5-swagger
+RUN node ace migration:run
 CMD [ "dumb-init", "node", "server.js" ]
