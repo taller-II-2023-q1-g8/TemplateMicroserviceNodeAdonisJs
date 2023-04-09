@@ -27,9 +27,5 @@ Route.get('/', async () => {
 Route.group(() => {
   Route.group(() => {
     Route.resource('users', 'UsersController') // /api/v1/users
-    /*Route.group(() => {
-      Route.post('login', 'AuthController.login')
-      Route.post('/logout', 'AuthController.logout')
-    }).prefix('/auth')*/
   }).prefix('/v1')
 }).prefix('/api')
