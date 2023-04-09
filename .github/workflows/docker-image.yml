@@ -19,9 +19,17 @@ jobs:
 
     - name: Run where am I
       run: pwd
+ 
+    - name: Run ls1
+      run: ls
+      
+    - name: Run go to app
+      run: cd ..
+      
+    - name: Run ls2
+      run: ls
       
     - name: Run tests
-      working-directory: ./TemplateMicroserviceNodeAdonisJs
       run: node ace test
 
     - name: Stop containers
