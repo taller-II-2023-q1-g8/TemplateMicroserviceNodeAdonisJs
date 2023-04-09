@@ -10,7 +10,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
-      - ${PG_PORT}:${PG_PORT}
+      - 5432:5432
 
   adonis_app:
     container_name: adonis_app
@@ -21,9 +21,7 @@ services:
       context: .
       target: dependencies
     ports:
-      - ${PORT_APP}:${PORT_APP}
-    env_file:
-      - .env
+      - 3333:3333
     environment:
       - PG_HOST=postgres
     volumes:
