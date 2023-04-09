@@ -17,7 +17,11 @@ jobs:
     - name: Start containers
       run: docker-compose -f "docker-compose-ci.yml" up -d --build
 
+    - name: Run where am I
+      run: pwd
+      
     - name: Run tests
+      working-directory: ./TemplateMicroserviceNodeAdonisJs
       run: node ace test
 
     - name: Stop containers
