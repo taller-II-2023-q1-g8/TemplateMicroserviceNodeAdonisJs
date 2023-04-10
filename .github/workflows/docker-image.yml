@@ -14,21 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Run npm install
+      run: npm install
+      
     - name: Start containers
       run: docker-compose -f "docker-compose-ci.yml" up -d --build
 
-    - name: Run where am I
-      run: pwd
- 
-    - name: Run ls1
-      run: ls
-      
-    - name: Run go to app
-      run: cd ..
-      
-    - name: Run ls2
-      run: ls
-      
     - name: Run tests
       run: node ace test
 
