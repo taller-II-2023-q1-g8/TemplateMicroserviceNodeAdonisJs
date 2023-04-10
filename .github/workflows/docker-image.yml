@@ -13,8 +13,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Make envfile
+      uses: SpicyPizza/create-envfile@v1.3
+      with:
+        envkey_PORT: ${{ vars.PORT }}
+        envkey_HOST: ${{ vars.HOST }}
+        envkey_NODE_ENV: ${{ vars.NODE_ENV }}
+        envkey_APP_KEY: ${{ secrets.APP_KEY }}
+        envkey_DRIVE_DISK: ${{ vars.DRIVE_DISK }}
+        envkey_DB_CONNECTION: ${{ vars.DB_CONNECTION }}
+        envkey_PG_HOST: ${{ vars.PG_HOST }}
+        envkey_PG_PORT: ${{ vars.PG_PORT }}
+        envkey_PG_USER: ${{ vars.PG_USER }}
+        envkey_PG_PASSWORD: ${{ secrets.PG_PASSWORD }}
+        envkey_PG_DB_NAME: ${{ vars.PG_DB_NAME }}
 
+    - uses: actions/checkout@v3
     - name: Run npm install
       run: npm install
       
