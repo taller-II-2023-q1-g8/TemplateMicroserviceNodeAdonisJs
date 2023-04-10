@@ -27,12 +27,13 @@ jobs:
         envkey_PG_USER: ${{ vars.PG_USER }}
         envkey_PG_PASSWORD: ${{ secrets.PG_PASSWORD }}
         envkey_PG_DB_NAME: ${{ vars.PG_DB_NAME }}
+        directory: ./
         
     - name: Check if env created 
       run: cat .env
       
     - name: Check where env was created 
-      run: ls
+      run: pwd
 
     - uses: actions/checkout@v3
     - name: Run npm install
