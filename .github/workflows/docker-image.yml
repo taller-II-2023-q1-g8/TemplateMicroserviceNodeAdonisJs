@@ -21,7 +21,7 @@ jobs:
         with:
           envkey_PORT_APP: ${{ vars.PORT_APP }}
           envkey_PORT: ${{ vars.PORT }}
-          envkey_HOST_APP: ${{ vars.HOST_APP }}
+          envkey_HOST: ${{ vars.HOST }}
           envkey_NODE_ENV: ${{ vars.NODE_ENV }}
           envkey_APP_KEY: ${{ secrets.APP_KEY }}
           envkey_DRIVE_DISK: ${{ vars.DRIVE_DISK }}
