@@ -18,7 +18,7 @@ RUN node ace build --production
 FROM base AS production
 ENV NODE_ENV=production
 ENV PORT=$PORT
-ENV HOST=0.0.0.0
+ENV HOST=127.0.0.1
 COPY --chown=node:node ./package*.json ./
 RUN npm ci --production
 COPY --chown=node:node --from=build /home/node/app/build .

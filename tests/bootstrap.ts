@@ -70,4 +70,7 @@ export const configureSuite: Required<Config>['configureSuite'] = (suite) => {
   if (suite.name === 'functional') {
     suite.setup(() => TestUtils.httpServer().start())
   }
+  if (suite.name === 'unit') {
+    suite.setup(() => TestUtils.httpServer().start())
+  }
 }
